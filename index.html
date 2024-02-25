@@ -15,6 +15,23 @@
             text-align: center; 
             text-transform: uppercase; 
         }
+
+        .input-box1 {
+          display: none;
+      }
+
+      .form :where(.input-box1 input) {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: #707070;
+        margin-top: 8px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 0 15px;
+      }
     </style>
   </head>
   <body>
@@ -68,37 +85,60 @@
           <input type="text" placeholder="Enter email address" name="Email" required />
         </div>
         
-        <div class="column">
+        
           <div class="input-box">
             <label>Mobile</label>
             <input type="number" placeholder="Enter mobile number" name="Phone Number" required />
           </div>
+
+          <div class="input-box">
+            <label>College/Company Name</label>
+            <input type="text" placeholder="Your answer" name="College name" required />
+          </div>
+
+          <div class="input-box">
+            <label>Year</label>
+            <input type="number" placeholder="Your answer" name="Year" required />
+            </div>
+
+            <div class="input-box">
+              <label>Qualification (Branch)</label>
+              <input type="text" placeholder="Your answer" name="Qualification (Branch)" />
+            </div>
+            
           <div class="input-box">
             <label>Select Demo Class Date</label>
             <input type="date" placeholder="Date" name="Date" required />
           </div>
-        </div>
-        <div class="gender-box">
-          <h3>Select Batch Time</h3>
-          <div class="gender-option">
-            <ul class="gender" style="list-style-type:none;">
-              <li><input type="radio" id="morning" name="batch_time"/>
-              <label for="morning">9am to 12pm [morning]</label></li>
-              <li><input type="radio" id="afternoon" name="batch_time" />
-                <label for="afternoon">1pm to 4pm [afternoon]</label></li>
-                <li><input type="radio" id="evening" name="batch_time" />
-                    <label for="evening">5pm to 8pm [evening]</label></li>
-                </ul>
+        
+          
+
+          <div class="gender-box">
+            <h3>Select Batch Time</h3>
+            <div class="gender-option">
+              <ul class="gender" style="list-style-type:none;">
+                <li><input type="radio" id="morning" name="batch_time"/>
+                <label for="morning">9am to 12pm [morning]</label></li>
+                <li><input type="radio" id="afternoon" name="batch_time" />
+                  <label for="afternoon">1pm to 4pm [afternoon]</label></li>
+                  <li><input type="radio" id="evening" name="batch_time" />
+                      <label for="evening">5pm to 8pm [evening]</label></li>
+                  </ul>
+            </div>
           </div>
-        </div>
-        <div class="input-box">
-            <label>Qualification (Branch)</label>
-            <input type="text" placeholder="Your answer" name="Qualification (Branch)" />
-          </div>
-        <div class="input-box">
-        <label>Year</label>
-        <input type="number" placeholder="Your answer" name="Year" required />
-        </div>
+        
+          <div class="gender-box">
+            <h3>Asterisc Branch:</h3>
+            <div class="gender-option">
+              <select class="gender" style="padding: 5px;" name="course" required>
+                <option value="Bhande Plot, Nandanvan">Bhande Plot ,Nandanvan</option>
+                <option value="Tiranga Chowk, Nandanvan">Tiranga Chowk, Nandanvan</option>
+                <option value="Bansi Nagar, Hingna">Bansi Nagar, Hingna</option>
+                <option value="Friends Colony, Katol Road">Friends Colony, Katol Road</option>
+               
+              </select>
+            </div>
+          </div>  
 
         <div class="gender-box" >
             <h3>Services:</h3>
@@ -137,8 +177,8 @@
                         <label for="cbc">College Boot-Camp</label>
                     </li>
                     <li style="margin-bottom: 5px;">
-                        <input type="checkbox" id="other" name="other" />
-                        <label for="other">Other:</label>
+                        <input type="checkbox" id="other1" name="other" onchange="toggleInput(1)" />
+                        <label for="other1">Other:</label>
                     </li>
                 </ul>
                 
@@ -146,7 +186,7 @@
               </div>
             </div>
         </div>
-        <div class="input-box">
+        <div class="input-box1" id="inputBox1">
             <input type="text" placeholder="Your answer" name="other" />
             </div>
             <div class="gender-box">
@@ -205,8 +245,8 @@
                             <label for="bf">By Friends</label>
                         </li>
                         <li style="margin-bottom: 5px;">
-                            <input type="checkbox" id="Other" name="Other" />
-                            <label for="Other">Other:</label>
+                            <input type="checkbox" id="other2" name="other" onchange="toggleInput(2)" />
+                            <label for="other">Other:</label>
                         </li>
                     </ul>
                     
@@ -214,7 +254,7 @@
                   </div>
                 </div>
             </div> 
-            <div class="input-box">
+            <div class="input-box1" id="inputBox2">
                 <input type="text" placeholder="Your answer" name="other" />
                 </div>  
                 
@@ -238,6 +278,19 @@
           width="100%" height="538" frameborder="0" style="border:0" allowfullscreen data-aos="fade-left" data-aos-duration="3000"></iframe>
       </div>
     </section>
+
+    <script>
+    function toggleInput(number) {
+        var checkbox = document.getElementById("other" + number);
+        var inputBox = document.getElementById("inputBox" + number);
+
+        if (checkbox.checked) {
+            inputBox.style.display = "block";
+        } else {
+            inputBox.style.display = "none";
+        }
+    }
+</script>
     
   </body>
 </html>
