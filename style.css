@@ -122,10 +122,10 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  background: rgb(130, 106, 251);
+  background: rgb(71 20 67);
 }
 .form button:hover {
-  background: rgb(88, 56, 250);
+  background: rgb(127, 35, 119);
 }
 /*Responsive*/
 @media screen and (max-width: 500px) {
