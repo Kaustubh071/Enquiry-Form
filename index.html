@@ -74,41 +74,41 @@
          </p>
 
 
-      <form method="post" action="https://script.google.com/macros/s/AKfycby2M_45GtOLonAFtQVY-5RVhDqRsaYfDFiTyxpbs9UOl7KigmVgJHXRksYSznmCOqyO/exec" name="contact-form" class="form">
+      <form method="post" action="https://script.google.com/macros/s/AKfycbwq8yVuSNckI0RIGxCCJyXt7sl-CDnVUxCfiVq8-ltm43BCEMMaL8MepBUmT09aR-lj/exec" name="contact-form" class="form">
         <div class="input-box">
           <label>Full Name</label>
-          <input type="text" placeholder="Enter full name" name="Full Name" required />
+          <input type="text" placeholder="Enter full name" name="fullName" required />
         </div>
 
         <div class="input-box">
           <label>Email Address</label>
-          <input type="text" placeholder="Enter email address" name="Email" required />
+          <input type="text" placeholder="Enter email address" name="email" required />
         </div>
         
         
           <div class="input-box">
             <label>Mobile</label>
-            <input type="number" placeholder="Enter mobile number" name="Phone Number" required />
+            <input type="number" placeholder="Enter mobile number" name="phoneNumber" required />
           </div>
 
           <div class="input-box">
             <label>College/Company Name</label>
-            <input type="text" placeholder="Your answer" name="College name" required />
+            <input type="text" placeholder="Your answer" name="collegename" required />
           </div>
 
           <div class="input-box">
             <label>Year</label>
-            <input type="number" placeholder="Your answer" name="Year" required />
+            <input type="number" placeholder="Your answer" name="year" required />
             </div>
 
             <div class="input-box">
               <label>Qualification (Branch)</label>
-              <input type="text" placeholder="Your answer" name="Qualification (Branch)" />
+              <input type="text" placeholder="Your answer" name="qualification(Branch)" />
             </div>
             
           <div class="input-box">
             <label>Select Demo Class Date</label>
-            <input type="date" placeholder="Date" name="Date" required />
+            <input type="date" placeholder="Date" name="date" required />
           </div>
         
           
@@ -117,20 +117,21 @@
             <h3>Select Batch Time</h3>
             <div class="gender-option">
               <ul class="gender" style="list-style-type:none;">
-                <li><input type="radio" id="morning" name="batch_time" checked/>
-                <label for="morning">9am to 12pm [morning]</label></li>
-                <li><input type="radio" id="afternoon" name="batch_time" />
+                <li><input type="radio" id="morning" name="batch_time" value="9am to 12pm [morning]"  checked/>
+                  <label for="morning">9am to 12pm [morning]</label></li>
+                <li><input type="radio" id="afternoon" name="batch_time" value="1pm to 4pm [afternoon]" />
                   <label for="afternoon">1pm to 4pm [afternoon]</label></li>
-                  <li><input type="radio" id="evening" name="batch_time" />
-                      <label for="evening">5pm to 8pm [evening]</label></li>
-                  </ul>
+                <li><input type="radio" id="evening" name="batch_time" value="5pm to 8pm [evening]" />
+                  <label for="evening">5pm to 8pm [evening]</label></li>
+              </ul>
             </div>
           </div>
+          
         
           <div class="gender-box">
             <h3>Asterisc Branch:</h3>
             <div class="gender-option">
-              <select   class="select-box"  name="course" required>
+              <select   class="select-box"  name="asteriscBranch" required>
                 <option value="Bhande Plot, Nandanvan">Bhande Plot ,Nandanvan</option>
                 <option value="Tiranga Chowk, Nandanvan">Tiranga Chowk, Nandanvan</option>
                 <option value="Bansi Nagar, Hingna">Bansi Nagar, Hingna</option>
@@ -177,7 +178,7 @@
                         <label for="cbc">College Boot-Camp</label>
                     </li>
                     <li style="margin-bottom: 5px;">
-                        <input type="checkbox" id="other1" name="other" onchange="toggleInput(1)" />
+                        <input type="checkbox" id="other1" name="other1" onchange="toggleInput(1)" />
                         <label for="other1">Other:</label>
                     </li>
                 </ul>
@@ -187,7 +188,7 @@
             </div>
         </div>
         <div class="input-box1" id="inputBox1">
-            <input type="text" placeholder="Your answer" name="other" />
+            <input type="text" placeholder="Your answer" name="name" />
             </div>
             <div class="gender-box">
                 <h3>Course:</h3>
@@ -245,7 +246,7 @@
                             <label for="bf">By Friends</label>
                         </li>
                         <li style="margin-bottom: 5px;">
-                            <input type="checkbox" id="other2" name="other" onchange="toggleInput(2)" />
+                            <input type="checkbox" id="other2" name="other2" onchange="toggleInput(2)" />
                             <label for="other">Other:</label>
                         </li>
                     </ul>
@@ -255,18 +256,18 @@
                 </div>
             </div> 
             <div class="input-box1" id="inputBox2">
-                <input type="text" placeholder="Your answer" name="other" />
+                <input type="text" placeholder="Your answer" name="name1" />
                 </div>  
                 
                 <div class="gender-box">
                     <h3>WANT FREE COURSE NOTIFICATION?</h3>
                     <div class="gender-option">
                       <ul class="gender" style="list-style-type:none;">
-                        <li><input type="radio" id="yes" name="free" checked />
+                        <li><input type="radio" id="yes" name="free" value="yes" checked />
                         <label for="yes">Yes</label></li>
-                        <li><input type="radio" id="no" name="free" />
+                        <li><input type="radio" id="no" name="free" value="no" />
                           <label for="no">No</label></li>
-                          <li><input type="radio" id="maybe" name="free" />
+                          <li><input type="radio" id="maybe" name="free" value="maybe"/>
                               <label for="maybe">Maybe</label></li>
                           </ul>
                     </div>
